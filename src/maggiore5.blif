@@ -1,0 +1,20 @@
+.model maggiore5
+
+.inputs a4 a3 a2 a1 a0 b4 b3 b2 b1 b0
+.outputs amb
+
+.subckt xor a=a4 b=b4 o=o4
+.subckt xor a=a3 b=b3 o=o3
+.subckt xor a=a2 b=b2 o=o2
+.subckt xor a=a1 b=b1 o=o1
+.subckt xor a=a0 b=b0 o=o0
+
+.names a4 a3 a2 a1 a0 o4 o3 o2 o1 o0 amb
+1----1---- 1
+-1---01--- 1
+--1--001-- 1
+---1-0001- 1
+----100001 1
+.search xor.blif
+
+.end

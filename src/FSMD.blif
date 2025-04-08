@@ -1,0 +1,334 @@
+.model fsmd
+.inputs IN OUT A B C
+.outputs SETTORE_NON_VALIDO SBARRA_IN SBARRA_OUT SECTOR_A SECTOR_B SECTOR_C
+.latch    muxa84 rega4 re NIL 0
+.latch    muxa83 rega3 re NIL 0
+.latch    muxa82 rega2 re NIL 0
+.latch    muxa81 rega1 re NIL 0
+.latch    muxa80 rega0 re NIL 0
+.latch    muxb84 regb4 re NIL 0
+.latch    muxb83 regb3 re NIL 0
+.latch    muxb82 regb2 re NIL 0
+.latch    muxb81 regb1 re NIL 0
+.latch    muxb80 regb0 re NIL 0
+.latch    muxc84 regc4 re NIL 0
+.latch    muxc83 regc3 re NIL 0
+.latch    muxc82 regc2 re NIL 0
+.latch    muxc81 regc1 re NIL 0
+.latch    muxc80 regc0 re NIL 0
+.latch    [15] LatchOut_v5   1
+.latch    [16] LatchOut_v6   0
+.latch    [17] LatchOut_v7   1
+.names p1 po SETTORE_NON_VALIDO
+11 1
+.names [447] [445] [446] [594] SBARRA_IN
+1--1 1
+-1-1 1
+--11 1
+.names muxc71 muxa71 muxb71 SBARRA_OUT
+1-- 1
+-1- 1
+--1 1
+.names suma4 suma3 suma1 [590] [610] SECTOR_A
+11111 1
+.names sumb4 sumb3 sumb1 [591] [611] SECTOR_B
+11111 1
+.names sumc4 muxc83 SECTOR_C
+11 1
+.names LatchOut_v5 LatchOut_v7 set
+0- 1
+-0 1
+.names IN OUT set [597] op1
+1001 1
+.names IN OUT set [597] op0
+0101 1
+.names C set po LatchOut_v5 LatchOut_v6 [631] p1
+--00-- 1
+10--1- 1
+-01--1 1
+.names IN OUT A B C LatchOut_v5 LatchOut_v7 LatchOut_v6 po
+-----01- 1
+---1--11 1
+1-0-0-11 1
+-10-0-11 1
+.names muxa71 [615] suma4
+11 1
+00 1
+.names rega3 c3 muxa71 c2 [632] suma3
+-0-1- 1
+-0--1 1
+1-11- 1
+.names rega1 rega0 muxa71 [445] c1 [623] suma1
+----01 1
+111--- 1
+-1-10- 1
+.names muxb71 [616] sumb4
+11 1
+00 1
+.names regb3 [349] muxb71 [350] [633] sumb3
+-0-1- 1
+-0--1 1
+1-11- 1
+.names regb1 regb0 muxb71 [446] [351] [624] sumb1
+----01 1
+111--- 1
+-1-10- 1
+.names andc1 regc3 OUT muxc23
+01- 1
+1-1 1
+.names muxc71 [617] sumc4
+11 1
+00 1
+.names muxc23 muxc71 [354] [612] [353]
+-11- 1
+1--1 1
+.names set suma4 muxa24 muxa84
+01- 1
+1-1 1
+.names anda1 rega4 IN muxa24
+01- 1
+1-1 1
+.names set suma3 [598] muxa83
+01- 1
+1-1 1
+.names set [599] [610] muxa82
+11- 1
+0-1 1
+.names set suma1 [600] muxa81
+01- 1
+1-1 1
+.names set [590] [601] muxa80
+01- 1
+1-1 1
+.names set sumb4 muxb24 muxb84
+01- 1
+1-1 1
+.names andb1 regb4 IN muxb24
+01- 1
+1-1 1
+.names set sumb3 [602] muxb83
+01- 1
+1-1 1
+.names set [603] [611] muxb82
+11- 1
+0-1 1
+.names set sumb1 [604] muxb81
+01- 1
+1-1 1
+.names set [591] [605] muxb80
+01- 1
+1-1 1
+.names sumc4 muxc84
+1 1
+.names andc1 regc4 IN muxc24
+01- 1
+1-1 1
+.names muxc23 [353] [612] [614] muxc83
+-01- 1
+1--1 1
+.names set muxc92 muxc71 [354] [355] [618] [625] muxc82
+---01-- 1
+1----1- 1
+---0--1 1
+-11-1-- 1
+.names [593] [618] muxc92
+11 1
+.names [447] [592] muxc71
+11 1
+.names muxc92 muxc71 [355] [625] [354]
+11-- 1
+--11 1
+.names muxc71 muxc91 muxc90 [447] [619] [355]
+1---1 1
+-111- 1
+.names set muxc71 [355] muxc91 muxc90 [619] [620] muxc81
+-10---- 1
+--0--1- 1
+1-----1 1
+-1-11-- 1
+.names [593] [620] muxc91
+11 1
+.names [593] [621] muxc90
+11 1
+.names muxc23 muxc24 muxc92 muxc91 muxc90 [592] [593] [594] [613] [447]
+1----1--1 1
+-1---1--1 1
+--1--1--1 1
+---1-1--1 1
+----11--1 1
+------111 1
+.names set muxc90 [447] [621] muxc80
+-01- 1
+-10- 1
+1--1 1
+.names po [15] anda1
+00 1
+.names rega3 muxa71 c2 [632] c3
+11-- 1
+--11 1
+.names [445] [592] muxa71
+11 1
+.names rega2 muxa71 c1 [606] c2
+11-- 1
+--11 1
+.names muxa24 [592] [594] [595] [598] [599] [600] [601] [445]
+11-0---- 1
+0-10---- 1
+-1-01--- 1
+--100--- 1
+-1-0-1-- 1
+--10-0-- 1
+-1-0--1- 1
+--10--0- 1
+-1-0---1 1
+--10---0 1
+.names rega1 rega0 muxa71 [445] [623] c1
+1-1-- 1
+-1-11 1
+.names po [15] andb1
+10 1
+.names regb3 muxb71 [350] [633] [349]
+11-- 1
+--11 1
+.names [446] [592] muxb71
+11 1
+.names regb2 muxb71 [351] [607] [350]
+11-- 1
+--11 1
+.names po muxb24 [592] [594] [602] [603] [604] [605] [446]
+111----- 1
+10-1---- 1
+1-1-1--- 1
+1--10--- 1
+1-1--1-- 1
+1--1-0-- 1
+1-1---1- 1
+1--1--0- 1
+1-1----1 1
+1--1---0 1
+.names regb1 regb0 muxb71 [446] [624] [351]
+1-1-- 1
+-1-11 1
+.names set [613] andc1
+11 1
+.names set p1 [15]
+0- 1
+-1 1
+.names A LatchOut_v6 [15] [17] [595] [16]
+--0-- 1
+---0- 1
+----1 1
+11--- 1
+.names IN OUT A B C LatchOut_v5 LatchOut_v7 LatchOut_v6 [17]
+------0- 1
+-0---1-- 1
+-----1-1 1
+0------0 1
+--0----0 1
+---0---0 1
+----0--0 1
+.names rega0 [445] [590]
+01 1
+10 1
+.names regb0 [446] [591]
+01 1
+10 1
+.names op1 [592]
+1 1
+.names muxc23 muxc24 [593]
+0- 1
+-0 1
+.names op0 [594]
+1 1
+.names p1 po [595]
+1- 1
+-1 1
+.names C po LatchOut_v6 [631] [597]
+-01- 1
+01-0 1
+.names OUT rega3 anda1 [598]
+1-1 1
+-10 1
+.names A rega2 anda1 [599]
+1-1 1
+-10 1
+.names B rega1 anda1 [600]
+1-1 1
+-10 1
+.names C rega0 anda1 [601]
+1-1 1
+-10 1
+.names OUT regb3 andb1 [602]
+1-1 1
+-10 1
+.names A regb2 andb1 [603]
+1-1 1
+-10 1
+.names B regb1 andb1 [604]
+1-1 1
+-10 1
+.names C regb0 andb1 [605]
+1-1 1
+-10 1
+.names rega2 muxa71 [606]
+1- 1
+-1 1
+.names regb2 muxb71 [607]
+1- 1
+-1 1
+.names rega2 muxa71 c2 c1 [606] [610]
+--01- 1
+--0-1 1
+11-1- 1
+.names regb2 muxb71 [350] [351] [607] [611]
+--01- 1
+--0-1 1
+11-1- 1
+.names muxc71 [354] [612]
+1- 1
+-1 1
+.names p1 po [613]
+10 1
+.names [353] muxc71 [354] [614]
+0-- 1
+-11 1
+.names rega4 c3 [615]
+11 1
+00 1
+.names regb4 [349] [616]
+11 1
+00 1
+.names [353] muxc24 [617]
+11 1
+00 1
+.names A regc2 andc1 [618]
+1-1 1
+-10 1
+.names muxc91 muxc90 [447] [619]
+1-- 1
+-11 1
+.names B regc1 andc1 [620]
+1-1 1
+-10 1
+.names C regc0 andc1 [621]
+1-1 1
+-10 1
+.names rega1 muxa71 [623]
+1- 1
+-1 1
+.names regb1 muxb71 [624]
+1- 1
+-1 1
+.names muxc92 muxc71 [625]
+1- 1
+-1 1
+.names A B [631]
+1- 1
+-0 1
+.names rega3 muxa71 [632]
+1- 1
+-1 1
+.names regb3 muxb71 [633]
+1- 1
+-1 1
+.end

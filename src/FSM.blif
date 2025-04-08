@@ -1,0 +1,126 @@
+.model fsm
+.inputs u4 u3 u2 u1 u0
+.outputs set op1 op0 p1 po
+.latch    [15] LatchOut_v5   1
+.latch    [16] LatchOut_v6   0
+.latch    [17] LatchOut_v7   1
+.start_kiss
+.i 5
+.o 5
+.p 28
+.s 5
+.r START
+0---- START START 00000
+-0--- START START 00000
+--0-- START START 00000
+---0- START START 00000
+----0 START START 00000
+11111 START A 00000
+----- A B 10000
+----- B C 10001
+----- C OP 10010
+10000 OP OP 00011
+01000 OP OP 00011
+11000 OP OP 00011
+--011 OP OP 00011
+--110 OP OP 00011
+--111 OP OP 00011
+01100 OP OP 00100
+10100 OP OP 01000
+11100 OP OP 00000
+00100 OP OP 00000
+01010 OP OP 00101
+10010 OP OP 01001
+11010 OP OP 00001
+00010 OP OP 00001
+01001 OP OP 00110
+10001 OP OP 01010
+11001 OP OP 00010
+00001 OP OP 00010
+00000 OP START 00000
+.end_kiss
+.latch_order LatchOut_v5 LatchOut_v6 LatchOut_v7
+.code START 101
+.code A 110
+.code B 011
+.code C 010
+.code OP 111
+.names set p1 [15]
+0- 1
+-1 1
+.names u2 LatchOut_v6 [17] set p1 po [16]
+--0--- 1
+---1-- 1
+----1- 1
+-----1 1
+11---- 1
+.names LatchOut_v5 LatchOut_v6 LatchOut_v7 [36] [37] [17]
+--0-- 1
+-0-1- 1
+1---1 1
+.names LatchOut_v5 LatchOut_v7 set
+0- 1
+-0 1
+.names u4 u3 set [31] op1
+1001 1
+.names u4 u3 set [31] op0
+0101 1
+.names u0 LatchOut_v5 LatchOut_v6 set po [35] p1
+-0--0- 1
+1-10-- 1
+---011 1
+.names u4 u3 u2 u1 u0 LatchOut_v5 LatchOut_v6 LatchOut_v7 po
+-----0-1 1
+---1--11 1
+1-0-0-11 1
+-10-0-11 1
+.names u0 LatchOut_v6 po [35] [31]
+-10- 1
+0-10 1
+.names u2 u1 [35]
+1- 1
+-0 1
+.names u4 u2 u1 u0 [36]
+0--- 1
+-0-- 1
+--0- 1
+---0 1
+.names u3 LatchOut_v6 [37]
+0- 1
+-1 1
+.exdc 
+.inputs u4 u3 u2 u1 u0 LatchOut_v5 LatchOut_v6 LatchOut_v7
+.outputs [15] [16] [17] set op1 op0 p1 po
+.names u2 u1 u0 LatchOut_v5 LatchOut_v6 LatchOut_v7 [15]
+---00- 1
+----00 1
+101111 1
+.names u2 u1 u0 LatchOut_v5 LatchOut_v6 LatchOut_v7 [16]
+---00- 1
+----00 1
+101111 1
+.names u2 u1 u0 LatchOut_v5 LatchOut_v6 LatchOut_v7 [17]
+---00- 1
+----00 1
+101111 1
+.names u2 u1 u0 LatchOut_v5 LatchOut_v6 LatchOut_v7 set
+---00- 1
+----00 1
+101111 1
+.names u2 u1 u0 LatchOut_v5 LatchOut_v6 LatchOut_v7 op1
+---00- 1
+----00 1
+101111 1
+.names u2 u1 u0 LatchOut_v5 LatchOut_v6 LatchOut_v7 op0
+---00- 1
+----00 1
+101111 1
+.names u2 u1 u0 LatchOut_v5 LatchOut_v6 LatchOut_v7 p1
+---00- 1
+----00 1
+101111 1
+.names u2 u1 u0 LatchOut_v5 LatchOut_v6 LatchOut_v7 po
+---00- 1
+----00 1
+101111 1
+.end

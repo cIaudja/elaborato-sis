@@ -1,0 +1,297 @@
+.model datapath
+.inputs o1 o0 s2 s1 s0 SET OP1 OP0 P1 P0
+.outputs NV BAR1 BAR0 A B C
+.latch    muxa84 rega4 re NIL 0
+.latch    muxa83 rega3 re NIL 0
+.latch    muxa82 rega2 re NIL 0
+.latch    muxa81 rega1 re NIL 0
+.latch    muxa80 rega0 re NIL 0
+.latch    muxb84 regb4 re NIL 0
+.latch    muxb83 regb3 re NIL 0
+.latch    muxb82 regb2 re NIL 0
+.latch    muxb81 regb1 re NIL 0
+.latch    muxb80 regb0 re NIL 0
+.latch    muxc84 regc4 re NIL 0
+.latch    muxc83 regc3 re NIL 0
+.latch    muxc82 regc2 re NIL 0
+.latch    muxc81 regc1 re NIL 0
+.latch    muxc80 regc0 re NIL 0
+.names P1 P0 NV
+11 1
+.names SET [441] anda1
+11 1
+.names anda1 rega4 o1 muxa24
+01- 1
+1-1 1
+.names c3 [425] suma4
+11 1
+00 1
+.names rega3 muxa71 c3 c2 [436] suma3
+--01- 1
+--0-1 1
+11-1- 1
+.names rega1 rega0 muxa71 c1 [433] [445] suma1
+---01- 1
+111--- 1
+-1-0-1 1
+.names SET suma4 muxa24 muxa84
+01- 1
+1-1 1
+.names SET suma3 [412] muxa83
+01- 1
+1-1 1
+.names SET [413] [422] muxa82
+11- 1
+0-1 1
+.names SET suma1 [415] muxa81
+01- 1
+1-1 1
+.names SET [405] [416] muxa80
+01- 1
+1-1 1
+.names [407] [445] muxa71
+11 1
+.names SET [439] andb1
+11 1
+.names andb1 regb4 o1 muxb24
+01- 1
+1-1 1
+.names [349] [426] sumb4
+11 1
+00 1
+.names regb3 muxb71 [349] [350] [437] sumb3
+--01- 1
+--0-1 1
+11-1- 1
+.names regb1 regb0 muxb71 [351] [434] [446] sumb1
+---01- 1
+111--- 1
+-1-0-1 1
+.names SET sumb4 muxb24 muxb84
+01- 1
+1-1 1
+.names SET sumb3 [417] muxb83
+01- 1
+1-1 1
+.names SET [418] [423] muxb82
+11- 1
+0-1 1
+.names SET sumb1 [420] muxb81
+01- 1
+1-1 1
+.names SET [406] [421] muxb80
+01- 1
+1-1 1
+.names [407] [446] muxb71
+11 1
+.names SET [440] andc1
+11 1
+.names andc1 regc4 o1 muxc24
+01- 1
+1-1 1
+.names andc1 regc3 o0 muxc23
+01- 1
+1-1 1
+.names [353] [427] sumc4
+11 1
+00 1
+.names SET sumc4 muxc24 muxc84
+01- 1
+1-1 1
+.names SET muxc23 [353] [424] [428] muxc83
+11--- 1
+-1--1 1
+0-01- 1
+.names SET muxc92 muxc71 [354] [355] [429] [435] muxc82
+1----1- 1
+0--01-- 1
+0--0--1 1
+011-1-- 1
+.names SET muxc91 muxc90 muxc71 [355] [430] [431] [447] muxc81
+1----1-- 1
+-111---- 1
+0---0-1- 1
+0-1-0--1 1
+.names SET muxc90 [432] [447] muxc80
+1-1- 1
+-1-0 1
+00-1 1
+.names [409] [429] muxc92
+11 1
+.names [409] [430] muxc91
+11 1
+.names [409] [432] muxc90
+11 1
+.names [407] [447] muxc71
+11 1
+.names [445] [446] [447] muxbar1
+1-- 1
+-1- 1
+--1 1
+.names muxbar1 [408] BAR1
+11 1
+.names muxbar1 [407] BAR0
+11 1
+.names rega3 muxa71 c2 [436] c3
+11-- 1
+--11 1
+.names rega2 muxa71 c1 [410] c2
+11-- 1
+--11 1
+.names rega1 rega0 muxa71 [433] [445] c1
+1-1-- 1
+-1-11 1
+.names regb3 muxb71 [350] [437] [349]
+11-- 1
+--11 1
+.names regb2 muxb71 [351] [411] [350]
+11-- 1
+--11 1
+.names regb1 regb0 muxb71 [434] [446] [351]
+1-1-- 1
+-1-11 1
+.names muxc23 muxc71 [354] [424] [353]
+-11- 1
+1--1 1
+.names muxc92 muxc71 [355] [435] [354]
+11-- 1
+--11 1
+.names muxc91 muxc90 muxc71 [431] [447] [355]
+1-1-- 1
+-1-11 1
+.names suma4 suma3 suma1 [405] [422] A
+11111 1
+.names sumb4 sumb3 sumb1 [406] [423] B
+11111 1
+.names muxc23 sumc4 [353] [424] [428] C
+-101- 1
+11--1 1
+.names rega0 [445] [405]
+01 1
+10 1
+.names regb0 [446] [406]
+01 1
+10 1
+.names OP1 OP0 [407]
+10 1
+.names OP1 OP0 [408]
+01 1
+.names muxc24 muxc23 [409]
+0- 1
+-0 1
+.names rega2 muxa71 [410]
+1- 1
+-1 1
+.names regb2 muxb71 [411]
+1- 1
+-1 1
+.names o0 anda1 rega3 [412]
+11- 1
+-01 1
+.names s2 anda1 rega2 [413]
+11- 1
+-01 1
+.names s1 anda1 rega1 [415]
+11- 1
+-01 1
+.names s0 anda1 rega0 [416]
+11- 1
+-01 1
+.names o0 andb1 regb3 [417]
+11- 1
+-01 1
+.names s2 andb1 regb2 [418]
+11- 1
+-01 1
+.names s1 andb1 regb1 [420]
+11- 1
+-01 1
+.names s0 andb1 regb0 [421]
+11- 1
+-01 1
+.names rega2 muxa71 c2 c1 [410] [422]
+--01- 1
+--0-1 1
+11-1- 1
+.names regb2 muxb71 [350] [351] [411] [423]
+--01- 1
+--0-1 1
+11-1- 1
+.names muxc71 [354] [424]
+1- 1
+-1 1
+.names rega4 muxa71 [425]
+11 1
+00 1
+.names regb4 muxb71 [426]
+11 1
+00 1
+.names muxc24 muxc71 [427]
+11 1
+00 1
+.names muxc71 [353] [354] [428]
+-0- 1
+1-1 1
+.names s2 andc1 regc2 [429]
+11- 1
+-01 1
+.names s1 andc1 regc1 [430]
+11- 1
+-01 1
+.names muxc91 muxc71 [431]
+1- 1
+-1 1
+.names s0 andc1 regc0 [432]
+11- 1
+-01 1
+.names rega1 muxa71 [433]
+1- 1
+-1 1
+.names regb1 muxb71 [434]
+1- 1
+-1 1
+.names muxc92 muxc71 [435]
+1- 1
+-1 1
+.names rega3 muxa71 [436]
+1- 1
+-1 1
+.names regb3 muxb71 [437]
+1- 1
+-1 1
+.names P1 P0 [439]
+01 1
+.names P1 P0 [440]
+10 1
+.names P1 P0 [441]
+00 1
+.names muxa24 [407] [408] [412] [413] [415] [416] [441] [445]
+11-----1 1
+0-1----1 1
+-1-1---1 1
+--10---1 1
+-1--1--1 1
+--1-0--1 1
+-1---1-1 1
+--1--0-1 1
+-1----11 1
+--1---01 1
+.names muxb24 [407] [408] [417] [418] [420] [421] [439] [446]
+11-----1 1
+0-1----1 1
+-1-1---1 1
+--10---1 1
+-1--1--1 1
+--1-0--1 1
+-1---1-1 1
+--1--0-1 1
+-1----11 1
+--1---01 1
+.names muxc24 muxc23 muxc92 muxc91 muxc90 [407] [408] [409] [440] [447]
+1----1--1 1
+-1---1--1 1
+--1--1--1 1
+---1-1--1 1
+----11--1 1
+------111 1
+.end

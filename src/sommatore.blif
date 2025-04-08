@@ -1,0 +1,18 @@
+.model sommatore
+
+.inputs a b cin
+.outputs o cout
+
+.names a b cin o
+000 0
+011 0
+101 0
+110 0
+
+.names a b cin cout
+000 0
+001 0
+010 0
+100 0
+
+.end

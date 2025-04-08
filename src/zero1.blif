@@ -1,0 +1,7 @@
+.model zero1
+
+.outputs o
+
+.names o 
+
+.end
