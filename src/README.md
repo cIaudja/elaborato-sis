@@ -31,7 +31,7 @@ Questo comando aprirà l'ambiente di simulazione.
 ### 5. Carica il file FSMD.blif
 Per caricare il file **FSMD.blif**, esegui il comando:
 
-`read_fsmd FSMD.blif`
+`rl FSMD.blif`
 
 ### 5.1. Visualizza `write_enq`
 Se desideri visualizzare l'output di `write_enq`, esegui il comando:
